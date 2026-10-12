@@ -3,13 +3,266 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
-</head>
-<body>
-  <h1>Hello, World!</h1>
-  <p>Welcome to my first website!</p>
+  <meta name="description" content="My personal web developer portfolio">
+  <title>JM.Dev | Portfolio</title>
 
-  <h2>About Me</h2>
-  <p>I am learning web development.</p>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b14;
+      color: #f5f3ff;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #262338;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #a78bfa;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #d4d4e0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #a78bfa;
+    }
+
+    .hero {
+      min-height: 65vh;
+      padding: 100px 8%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .tag {
+      color: #c4b5fd;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 66px);
+      line-height: 1.15;
+      max-width: 750px;
+      margin-bottom: 22px;
+    }
+
+    h1 span, h2 span {
+      color: #a78bfa;
+    }
+
+    .intro {
+      max-width: 600px;
+      color: #c4c4d4;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #8b5cf6;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #7c3aed;
+    }
+
+    section.content {
+      padding: 65px 8%;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .muted {
+      color: #c4c4d4;
+      max-width: 750px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .card {
+      background: #151522;
+      border: 1px solid #29263d;
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      color: #c4b5fd;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #c4c4d4;
+      font-size: 15px;
+    }
+
+    .contact a {
+      color: #c4b5fd;
+    }
+
+    footer {
+      text-align: center;
+      color: #9292a5;
+      padding: 25px;
+      border-top: 1px solid #262338;
+      font-size: 13px;
+    }
+
+    @media (max-width: 500px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .hero, section.content {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      .hero {
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">JM.Dev</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="tag">HELLO, WORLD! 👋</p>
+
+      <h1>Hi, I'm a <span>Future Web Developer.</span></h1>
+
+      <p class="intro">
+        I'm learning to build modern and useful websites.
+        This is my portfolio, where I share my skills,
+        practice projects, and journey in web development.
+      </p>
+
+      <a class="button" href="#projects">Explore My Work ↘</a>
+    </section>
+
+    <section class="content" id="about">
+      <h2>About <span>Me</span></h2>
+
+      <p class="muted">
+        I'm a beginner in web development who enjoys learning
+        how websites work. My goal is to improve my coding skills
+        and create websites that are useful, accessible, and easy to use.
+      </p>
+    </section>
+
+    <section class="content" id="skills">
+      <h2>My <span>Skills</span></h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>HTML</h3>
+          <p>Learning to organize website content and structure.</p>
+        </article>
+
+        <article class="card">
+          <h3>CSS</h3>
+          <p>Learning colors, layouts, responsive design, and styling.</p>
+        </article>
+
+        <article class="card">
+          <h3>JavaScript</h3>
+          <p>My next step is learning to make websites interactive.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content" id="projects">
+      <h2>My <span>Projects</span></h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>My First Website</h3>
+          <p>A personal portfolio published using GitHub Pages.</p>
+        </article>
+
+        <article class="card">
+          <h3>Coming Soon</h3>
+          <p>More practice projects will be added as I learn.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content contact" id="contact">
+      <h2>Contact <span>Me</span></h2>
+
+      <p class="muted">
+        Want to connect or discuss a website project?
+        You can add your public contact link here.
+      </p>
+
+      <!-- Replace the example link with your own public contact link. -->
+      <p style="margin-top: 18px;">
+        <a href="https://github.com/">Find me on GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 JM.Dev | Built with HTML and CSS
+  </footer>
 </body>
 </html>
